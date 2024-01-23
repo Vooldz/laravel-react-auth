@@ -1,0 +1,21 @@
+header {
+
+    .nav-top {
+        background-color: var(--main-color);
+        padding: 1px 0;
+        color: white;
+    }
+
+    .nav-center {
+        padding: var(--main-padding) 0;
+
+        h1 {
+            color: var(--main-color);
+        }
+    }
+
+    .nav-bottom {
+        padding: 1px 0;
+        background-color: var(--main-color);
+    }
+}
