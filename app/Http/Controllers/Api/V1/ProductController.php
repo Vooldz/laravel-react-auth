@@ -3,10 +3,13 @@
 namespace App\Http\Controllers\Api\V1;
 
 use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Support\Str;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Resources\Api\V1\ProductResource;
+use App\Http\Resources\Api\V1\CategoryResource;
 use App\Http\Requests\Api\V1\StoreProductRequest;
 use App\Http\Requests\Api\V1\UpdateProductRequest;
 
@@ -15,9 +18,22 @@ class ProductController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        return ProductResource::collection(Product::with('categories')->paginate(10));
+        $categoryId = $request->query('category');
+
+        $productsQuery = Product::with('categories');
+
+        if ($categoryId && Category::find($categoryId)) {
+
+            $productsQuery->whereHas('categories', function ($query) use ($categoryId) {
+                $query->where('categories.id', $categoryId);
+            });
+        }
+
+        $products = $productsQuery->paginate(10);
+
+        return ProductResource::collection($products);
     }
 
     /**
