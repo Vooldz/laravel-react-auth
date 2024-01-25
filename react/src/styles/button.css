@@ -1,0 +1,28 @@
+button,
+.button {
+    margin: 0;
+    border: 0;
+    padding: 5px 1rem;
+    background-color: var(--grey-color);
+    box-shadow: var(--main-shadow),
+        0 0 1px 0.5px #6c6969f5;
+    cursor: pointer;
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    color: inherit;
+}
+
+.icon {
+    padding: 3px 4px;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.transparent {
+    box-shadow: 0 0 1px 0.5px #6c6969f5;
+    background-color: #c5c5c58c;
+    backdrop-filter: blur(0.3px);
+    border-radius: 0px;
+    color: white;
+}

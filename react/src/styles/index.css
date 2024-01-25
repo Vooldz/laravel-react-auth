@@ -1,0 +1,42 @@
+:root {
+  --main-padding: 5px;
+  --main-color: green;
+  --primary-color: #03A9F4;
+  --secondary-color: #FFEB3B;
+  --grey-color: #dadada;
+
+  --main-shadow: 0 1px 3px #51515191;
+}
+
+::selection {
+  color: var(--primary-color);
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  outline: none;
+  border: none;
+  padding: 5px var(--main-padding);
+  width: 100%;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+select:focus {
+  outline: none;
+}
