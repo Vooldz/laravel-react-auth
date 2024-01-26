@@ -24,5 +24,16 @@ button,
     background-color: #c5c5c58c;
     backdrop-filter: blur(0.3px);
     border-radius: 0px;
-    color: white;
+    /* color: white; */
+}
+
+.primary {
+    background-color: var(--primary-color);
+}
+.secondary {
+    background-color: var(--main-color);
+}
+
+.simple {
+    box-shadow: none;
 }

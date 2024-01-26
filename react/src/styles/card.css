@@ -1,0 +1,70 @@
+.cards-scroller {
+    overflow: scroll;
+    padding: 10px;
+
+    .cards-container {
+        display: flex;
+        gap: 10px;
+
+        .card {
+            max-width: 260px;
+            min-width: 217px;
+            /* for disigne */
+            flex: 1;
+            box-shadow: var(--main-shadow), var(--out-line);
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .card-img {
+                height: 120px;
+                /* for disigne */
+                background-color: var(--primary-color);
+            }
+
+            .card-body {
+                padding: 10px var(--main-padding);
+
+                .card-text {
+
+                    .card-title,
+                    .card-desc,
+                    .card-info {
+                        margin-bottom: 10px;
+
+                        &.card-title {
+                            font-size: x-large;
+                        }
+
+                        &.card-desc {
+                            color: var(--text-color);
+                        }
+                    }
+
+                    .card-info {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        small {
+                            flex: 1;
+
+                            &.card-rating {
+                                color: var(--secondary-color);
+                            }
+
+                            &.card-price {}
+                        }
+                    }
+                }
+
+                .card-actions {
+                    display: flex;
+                    color: white;
+                }
+            }
+        }
+    }
+}

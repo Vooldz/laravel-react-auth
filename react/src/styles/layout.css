@@ -22,3 +22,6 @@
 .column {
     flex-direction: column;
 }
+.section-title {
+    padding: var(--main-padding) 10px;
+}

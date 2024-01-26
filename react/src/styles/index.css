@@ -5,7 +5,10 @@
   --secondary-color: #FFEB3B;
   --grey-color: #dadada;
 
-  --main-shadow: 0 1px 3px #51515191;
+  --text-color: #2d2d2d;
+
+  --main-shadow: 0 1px 6px #00000087;
+    --out-line: 0 0 0 .7px #3131319e;
 }
 
 ::selection {
@@ -26,6 +29,9 @@ ul {
   list-style: none;
 }
 
+img {
+  width: 100%;
+}
 input {
   outline: none;
   border: none;
@@ -39,4 +45,9 @@ input {
 
 select:focus {
   outline: none;
+}
+
+
+::-webkit-scrollbar {
+  display: none;
 }
