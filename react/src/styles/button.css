@@ -24,7 +24,8 @@ button,
     background-color: #c5c5c58c;
     backdrop-filter: blur(0.3px);
     border-radius: 0px;
-    /* color: white; */
+    color: white;
+        margin-left: 0;
 }
 
 .primary {
@@ -35,5 +36,6 @@ button,
 }
 
 .simple {
+    margin-left: 0;
     box-shadow: none;
 }

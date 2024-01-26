@@ -2,7 +2,7 @@
   --main-padding: 5px;
   --main-color: green;
   --primary-color: #03A9F4;
-  --secondary-color: #FFEB3B;
+  --secondary-color: #ffc107;
   --grey-color: #dadada;
 
   --text-color: #2d2d2d;
@@ -18,8 +18,12 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: roboto, sans-serif;
 }
 
+.App {
+  background-color: #e5f6ff;
+}
 a {
   text-decoration: none;
   color: black;
@@ -35,7 +39,7 @@ img {
 input {
   outline: none;
   border: none;
-  padding: 5px var(--main-padding);
+  padding: 8px var(--main-padding);
   width: 100%;
 
   &:focus {
@@ -43,9 +47,27 @@ input {
   }
 }
 
-select:focus {
-  outline: none;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: inherit;
 }
+
+svg {
+  width: 26px;
+  height: 26px;
+}
+select{
+
+  height: 100%;
+  &:focus {
+    outline: none;
+  }
+}
+
 
 
 ::-webkit-scrollbar {

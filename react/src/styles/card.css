@@ -5,66 +5,72 @@
     .cards-container {
         display: flex;
         gap: 10px;
+    }
+}
 
-        .card {
-            max-width: 260px;
-            min-width: 217px;
-            /* for disigne */
-            flex: 1;
-            box-shadow: var(--main-shadow), var(--out-line);
-            border-radius: 10px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+.card {
+    max-width: 260px;
+    min-width: 217px;
+    /* for disigne */
+    flex: 1;
+    box-shadow: var(--main-shadow), var(--out-line);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-            .card-img {
-                height: 120px;
-                /* for disigne */
-                background-color: var(--primary-color);
-            }
+    .card-img {
+        height: 120px;
+        /* for disigne */
+        background-color: var(--primary-color);
+    }
 
-            .card-body {
-                padding: 10px var(--main-padding);
+    .card-body {
+        padding: 10px var(--main-padding);
 
-                .card-text {
+        .card-text {
 
-                    .card-title,
-                    .card-desc,
-                    .card-info {
-                        margin-bottom: 10px;
+            .card-title,
+            .card-desc,
+            .card-info {
+                margin-bottom: 10px;
 
-                        &.card-title {
-                            font-size: x-large;
-                        }
-
-                        &.card-desc {
-                            color: var(--text-color);
-                        }
-                    }
-
-                    .card-info {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-
-                        small {
-                            flex: 1;
-
-                            &.card-rating {
-                                color: var(--secondary-color);
-                            }
-
-                            &.card-price {}
-                        }
-                    }
+                &.card-title {
+                    font-size: x-large;
                 }
 
-                .card-actions {
+                &.card-desc {
+                    color: var(--text-color);
+                }
+            }
+
+            .card-info {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                small {
+                    flex: 1;
                     display: flex;
-                    color: white;
+                    justify-content: space-around;
+                    align-items: center;
+
+                    &.card-rating {
+                        color: var(--secondary-color);
+                        svg {
+                            width: 15px;
+                            height: 15px;
+                        }
+                    }
                 }
             }
+        }
+
+        .card-actions {
+            display: flex;
+            justify-content: space-around;
+            color: white;
         }
     }
 }
