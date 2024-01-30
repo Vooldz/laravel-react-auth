@@ -1,76 +1,94 @@
 .cards-scroller {
     overflow: scroll;
     padding: 10px;
+}
 
-    .cards-container {
-        display: flex;
-        gap: 10px;
-    }
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .card {
-    max-width: 260px;
-    min-width: 217px;
-    /* for disigne */
+    min-width: 214px;        
     flex: 1;
     box-shadow: var(--main-shadow), var(--out-line);
-    border-radius: 10px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
 
-    .card-img {
-        height: 120px;
-        /* for disigne */
-        background-color: var(--primary-color);
+    &.product {
+        /* .card-img {
+            /* for disigne 
+            height: 120px;
+            background-color: var(--primary-color);
+        } */
+
+        .card-body {
+            padding: 10px var(--main-padding);
+        }
     }
 
-    .card-body {
-        padding: 10px var(--main-padding);
+    &.backgrounded {
+        max-height: 100%;
+        cursor: default;
+        .card-img {
+            max-height: 100%;
+        }
 
-        .card-text {
+        .card-body {
+            position: absolute;
+            padding: 10px var(--main-padding);
+        }
+    }
 
-            .card-title,
-            .card-desc,
-            .card-info {
-                margin-bottom: 10px;
+    .card-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
-                &.card-title {
-                    font-size: x-large;
-                }
+        .card-title,
+        .card-desc,
+        .card-info {
+            margin-bottom: 10px;
 
-                &.card-desc {
-                    color: var(--text-color);
-                }
+            &.card-title {
+                font-size: x-large;
             }
 
-            .card-info {
+            &.card-desc {
+                color: var(--text-color);
+            }
+        }
+
+        .card-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            small {
+                flex: 1;
                 display: flex;
-                justify-content: space-between;
+                justify-content: space-around;
                 align-items: center;
 
-                small {
-                    flex: 1;
-                    display: flex;
-                    justify-content: space-around;
-                    align-items: center;
+                &.card-rating {
+                    color: var(--secondary-color);
 
-                    &.card-rating {
-                        color: var(--secondary-color);
-                        svg {
-                            width: 15px;
-                            height: 15px;
-                        }
+                    svg {
+                        width: 15px;
+                        height: 15px;
                     }
                 }
             }
         }
+    }
 
-        .card-actions {
-            display: flex;
-            justify-content: space-around;
-            color: white;
-        }
+    .card-actions {
+        display: flex;
+        justify-content: space-around;
+        color: white;
     }
 }

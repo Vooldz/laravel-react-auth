@@ -5,14 +5,22 @@ import Card from './Card';
 // style
 import '../../styles/card.css';
 
+const cardData = {
+    img: 'https://placehold.co/800x400',
+    title: 'This is a test card',
+    // desc: 'somthing',
+    info: {
+        price: "220",
+        rate: 3,
+    }
+}
+
 const CardList = () => {
     return (
-        <div className="cards-scroller">
-            <div className="cards-container">
-                <Card />
-                <Card />
-                <Card />
-            </div>
+        <div className="cards-container">
+            {[...Array(8)].map((star, index) => (
+                <Card key={index} data={cardData} type={"product"} />
+            ))}
         </div>
     )
 }

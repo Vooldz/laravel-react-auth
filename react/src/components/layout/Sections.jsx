@@ -1,10 +1,10 @@
-import Cards from './Cards'
+import CardList from './CardList'
 
 const Sections = () => {
     return (
         <div>
             <h1 className="section-title">title</h1>
-            <Cards />
+            <CardList />
         </div>
     )
 }
