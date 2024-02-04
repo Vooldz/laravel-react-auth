@@ -1,4 +1,3 @@
-
 // componets
 import Card from './Card';
 
@@ -15,10 +14,10 @@ const cardData = {
     }
 }
 
-const CardList = () => {
+const CardList = ({count}) => {
     return (
         <div className="cards-container">
-            {[...Array(8)].map((star, index) => (
+            {[...Array(count)].map((star, index) => (
                 <Card key={index} data={cardData} type={"product"} />
             ))}
         </div>

@@ -15,7 +15,7 @@ const Card = ({ data, type, actions }) => {
                     {data.title && (
                         <h4 className="card-title">card title</h4>
                     )}
-                    {data.desc && (
+                    {data.discription && (
                         <p className='card-desc'>
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem ullam atque soluta commodi et pariatur iure culpa sapiente amet quisquam.
                         </p>

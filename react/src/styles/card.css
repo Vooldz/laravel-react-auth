@@ -3,14 +3,14 @@
     padding: 10px;
 }
 
-.cards-container {
+.card-list {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
 
 .card {
-    min-width: 214px;        
+    min-width: 214px;
     flex: 1;
     box-shadow: var(--main-shadow), var(--out-line);
     overflow: hidden;
@@ -34,6 +34,7 @@
     &.backgrounded {
         max-height: 100%;
         cursor: default;
+      
         .card-img {
             max-height: 100%;
         }
@@ -44,6 +45,20 @@
         }
     }
 
+    &.ad {
+        flex-direction: row-reverse;
+
+        .card-body {
+            padding: var(--main-padding);
+
+            .card-text {
+                margin: auto;
+                text-align: center;
+                justify-content: space-between;
+            }
+        }
+    }
+  
     .card-text {
         display: flex;
         flex-direction: column;

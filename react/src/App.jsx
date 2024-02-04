@@ -2,26 +2,17 @@
 // import axiosClient from "./axiosClient"
 
 //components
+import Footer from "./components/footer/Footer"
 import Header from "./components/header/Header"
 import Home from "./pages/Home"
 function App() {
-  // const [categories, setCategories] = useState([])
-
-  // useEffect(() => {
-  //   axiosClient.get('/categories').then(response => {
-  //     console.log('categories: ', response.data)
-  //   })
-  //   axiosClient.get('/products').then(response => {
-  //     console.log('products: ', response.data)
-  //   })
-  // }, [])
-
   return (
     <div className="App">
       <Header />
+      {/*  routes here... */}
       <Home />
-    </div>
-  )
+      
+      <Footer />
 }
 
 export default App
