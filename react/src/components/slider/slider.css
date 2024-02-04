@@ -2,12 +2,12 @@
     background: var(--darkreader-selection-background);
     height: 200px;
     position: relative;
-    margin-bottom: 15px;
+    margin-bottom:  15px;
 
     @media (min-width: 768px) {
         height: 300px;
     }
-
+  
     @media (min-width: 991px) {
         height: 400px;
     }

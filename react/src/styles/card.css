@@ -18,7 +18,6 @@
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    /* margin: 10px 0; */
 
     &.product {
         /* .card-img {
@@ -35,7 +34,7 @@
     &.backgrounded {
         max-height: 100%;
         cursor: default;
-
+      
         .card-img {
             max-height: 100%;
         }
@@ -59,7 +58,7 @@
             }
         }
     }
-
+  
     .card-text {
         display: flex;
         flex-direction: column;

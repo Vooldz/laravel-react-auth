@@ -1,10 +1,10 @@
 header {
     display: flex;
-    
-        @media (min-width: 768px) {
-            flex-direction: column;
-        }
 
+    @media (min-width: 768px) {
+        flex-direction: column;
+    }
+    
     .nav-top {
         background-color: var(--main-color);
         padding: 1px 0;
@@ -15,27 +15,27 @@ header {
         width: 100%;
         padding: var(--main-padding) 0;
         color: white;
-            background-color: var(--main-color);
-            fill: white;
-            box-shadow: var(--main-shadow);
+      
+        background-color: var(--main-color);
+        fill: white;
+        box-shadow: var(--main-shadow);
         
-            @media(min-width: 768px) {
-                color: var(--main-color);
-                fill: var(--main-color);
-                background-color: white;
-                box-shadow: none;
-            }
+        @media(min-width: 768px) {
+            color: var(--main-color);
+            fill: var(--main-color);
+            background-color: white;
+            box-shadow: none;
+        }
 
         h1 {
             letter-spacing: 3px;
+        }
+
+        ul {
+            display: none;
+            @media (min-width: 768px) {
+                display: flex;
             }
-            
-            ul {
-                display: none;
-            
-                @media (min-width: 768px) {
-                    display: flex;
-                }
         }
     }
 

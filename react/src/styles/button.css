@@ -31,7 +31,6 @@ button,
 .primary {
     background-color: var(--primary-color);
 }
-
 .secondary {
     background-color: var(--main-color);
 }
