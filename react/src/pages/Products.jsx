@@ -4,7 +4,6 @@ const Products = () => {
     return (
         <div>
             <Sections />
-            
         </div>
     )
 }

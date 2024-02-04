@@ -2,6 +2,7 @@
 import { useEffect } from "react"
 import Header from "./components/header/Header"
 import axiosClient from "./axiosClient"
+import Home from "./pages/Home"
 function App() {
 
   useEffect(() => {
@@ -13,6 +14,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <Home />
     </div>
   )
 }
