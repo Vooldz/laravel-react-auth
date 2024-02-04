@@ -13,6 +13,8 @@ function App() {
       <Home />
       
       <Footer />
+    </div>
+  )
 }
 
 export default App
