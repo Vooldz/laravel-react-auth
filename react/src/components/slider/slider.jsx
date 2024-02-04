@@ -6,7 +6,6 @@ const cardData = {
     title: 'This is a test card',
 }
 
-
 const Slider = () => {
     return (
         <div className="slider">
@@ -18,8 +17,8 @@ const Slider = () => {
                 ]}
             />
             <ul className="bullets">
-                {[...Array(4)].map(ele => (
-                    <li key={ele}></li>
+                {[...Array(4)].map((ele, idx) => (
+                    <li key={idx}></li>
                 ))}
             </ul>
         </div>

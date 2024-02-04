@@ -5,6 +5,7 @@ import { FaRegUserCircle } from "react-icons/fa";
 import { FaDropbox } from "react-icons/fa";
 import { IoMdSearch } from "react-icons/io";
 import { RiInboxArchiveFill } from "react-icons/ri";
+import { MdMenu } from "react-icons/md";
 
 // style
 import './header.css'
@@ -12,7 +13,7 @@ import './header.css'
 const Header = () => {
     return (
         <header>
-            <div className="nav-top">
+            <div className="nav-top hidden-in-small">
                 <div className="container flex">
                     <div className="flex">
                         <button className="icon">button1</button>
@@ -30,15 +31,20 @@ const Header = () => {
             </div>
             <div className="nav-center">
                 <div className="container flex">
-                    <button className="icon"><h1 className="flex"><FaDropbox color="green" /> Logo</h1></button>
+                    <button className="icon simple"><h1 className="flex"><FaDropbox />VOOLDZ</h1></button>
                     <ul className="flex">
                         {["link1", "link2", "link3", "link4"].map(link => (
                             <li key={link}><Link to={link} className="button icon">{link}</Link></li>
                         ))}
                     </ul>
+                    <div className="flex hidden-in-large">
+                        <Link className="button icon" to={'/profile'}><FaRegUserCircle /></Link>
+                        <Link className="button icon" to={'/inbox'}><RiInboxArchiveFill /></Link>
+                        <button className="icon"><MdMenu /></button>
+                    </div>
                 </div>
             </div>
-            <div className="nav-bottom">
+            <div className="nav-bottom hidden-in-small">
                 <div className="container flex">
                     <select name="categories" id="categories" className="button transparent">
                         <option value="electronics">electronics</option>

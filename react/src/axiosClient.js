@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosClient = axios.create({
-    baseURL: `${import.meta.env.VITE_BASE_URL}`,
+    baseURL: `${import.meta.env.VITE_BASE_URL}/api/v1`,
 });
 
 axiosClient.interceptors.request.use((config) => {
@@ -12,6 +12,7 @@ axiosClient.interceptors.request.use((config) => {
 });
 
 axiosClient.interceptors.response.use(
+
     (response) => {
         console.log("response: ", response);
         return response;
