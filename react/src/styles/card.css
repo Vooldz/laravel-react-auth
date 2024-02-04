@@ -1,0 +1,109 @@
+.cards-scroller {
+    overflow: scroll;
+    padding: 10px;
+}
+
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.card {
+    min-width: 214px;
+    flex: 1;
+    box-shadow: var(--main-shadow), var(--out-line);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+    &.product {
+        /* .card-img {
+            /* for disigne 
+            height: 120px;
+            background-color: var(--primary-color);
+        } */
+
+        .card-body {
+            padding: 10px var(--main-padding);
+        }
+    }
+
+    &.backgrounded {
+        max-height: 100%;
+        cursor: default;
+      
+        .card-img {
+            max-height: 100%;
+        }
+
+        .card-body {
+            position: absolute;
+            padding: 10px var(--main-padding);
+        }
+    }
+
+    &.ad {
+        flex-direction: row-reverse;
+
+        .card-body {
+            padding: var(--main-padding);
+
+            .card-text {
+                margin: auto;
+                text-align: center;
+                justify-content: space-between;
+            }
+        }
+    }
+  
+    .card-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .card-title,
+        .card-desc,
+        .card-info {
+            margin-bottom: 10px;
+
+            &.card-title {
+                font-size: x-large;
+            }
+
+            &.card-desc {
+                color: var(--text-color);
+            }
+        }
+
+        .card-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            small {
+                flex: 1;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+                &.card-rating {
+                    color: var(--secondary-color);
+
+                    svg {
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    .card-actions {
+        display: flex;
+        justify-content: space-around;
+        color: white;
+    }
+}
