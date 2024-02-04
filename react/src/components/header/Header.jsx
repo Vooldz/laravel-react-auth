@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import Modal from 'react-modal'
 
 // icons 
 import { FaRegUserCircle } from "react-icons/fa";
@@ -10,7 +12,19 @@ import { MdMenu } from "react-icons/md";
 // style
 import './header.css'
 
+const navLinks = (
+    <ul className="flex">
+        {["link1", "link2", "link3", "link4"].map(link => (
+            <li key={link}><Link to={link} className="button icon">{link}</Link></li>
+        ))}
+    </ul>
+)
+
 const Header = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    
+
     return (
         <header>
             <div className="nav-top hidden-in-small">
@@ -32,11 +46,7 @@ const Header = () => {
             <div className="nav-center">
                 <div className="container flex">
                     <button className="icon simple"><h1 className="flex"><FaDropbox />VOOLDZ</h1></button>
-                    <ul className="flex">
-                        {["link1", "link2", "link3", "link4"].map(link => (
-                            <li key={link}><Link to={link} className="button icon">{link}</Link></li>
-                        ))}
-                    </ul>
+                    {navLinks}
                     <div className="flex hidden-in-large">
                         <Link className="button icon" to={'/profile'}><FaRegUserCircle /></Link>
                         <Link className="button icon" to={'/inbox'}><RiInboxArchiveFill /></Link>
@@ -56,6 +66,9 @@ const Header = () => {
                     </div>
                 </div>
             </div>
+            <Modal className='hide-in-larege'>
+                {navLinks}
+            </Modal>
         </header>
     )
 }
