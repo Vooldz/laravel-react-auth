@@ -1,6 +1,9 @@
-import Card from './Card'
-import CardList from './CardList';
+/* eslint-disable react/prop-types */
 
+import Card from './Card'
+// import CardList from './CardList';
+
+// some dummy data for testing
 const cardData = {
     img: 'https://placehold.co/800x400',
     title: 'This is a test card',
