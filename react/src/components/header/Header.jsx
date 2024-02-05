@@ -1,6 +1,6 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Modal from 'react-modal'
 
 // icons 
 import { FaRegUserCircle } from "react-icons/fa";
@@ -12,18 +12,19 @@ import { MdMenu } from "react-icons/md";
 // style
 import './header.css'
 
-const navLinks = (
-    <ul className="flex">
-        {["link1", "link2", "link3", "link4"].map(link => (
-            <li key={link}><Link to={link} className="button icon">{link}</Link></li>
-        ))}
-    </ul>
-)
+// components
+import Popup from "../popup/Popup";
+import Search from "../layout/Search";
+import NavLinks from "../layout/NavLinks";
 
 const Header = () => {
+    const [popupType, setPopupType] = useState(null)
     const [isOpen, setIsOpen] = useState(false);
 
-    
+    const openModal = (type) => {
+        setPopupType(type);
+        setIsOpen(!isOpen);
+    }
 
     return (
         <header>
@@ -35,7 +36,7 @@ const Header = () => {
                     </div>
                     <div className="flex">
                         <Link className="button icon" to={'/profile'}><FaRegUserCircle /></Link>
-                        <Link className="button icon" to={'/inbox'}><RiInboxArchiveFill /></Link>
+                        <button className="icon" onClick={() => openModal("window")}><RiInboxArchiveFill /></button>
                         <select className="button icon" name="lang" id="lang">
                             <option value="english">english</option>
                             <option value="arabic">arabic</option>
@@ -46,29 +47,19 @@ const Header = () => {
             <div className="nav-center">
                 <div className="container flex">
                     <button className="icon simple"><h1 className="flex"><FaDropbox />VOOLDZ</h1></button>
-                    {navLinks}
+                    <NavLinks style={"row"} />
                     <div className="flex hidden-in-large">
+                        <button className="icon" onClick={() => openModal("window-search")}><IoMdSearch /></button>
                         <Link className="button icon" to={'/profile'}><FaRegUserCircle /></Link>
-                        <Link className="button icon" to={'/inbox'}><RiInboxArchiveFill /></Link>
-                        <button className="icon"><MdMenu /></button>
+                        <button className="icon" onClick={() => openModal("window-products")}><RiInboxArchiveFill /></button>
+                        <button className="icon" onClick={() => openModal("list")}><MdMenu /></button>
                     </div>
                 </div>
             </div>
             <div className="nav-bottom hidden-in-small">
-                <div className="container flex">
-                    <select name="categories" id="categories" className="button transparent">
-                        <option value="electronics">electronics</option>
-                        <option value="clothes">clothes</option>
-                    </select>
-                    <div className="flex full transparent">
-                        <input type="text" placeholder="Search..." />
-                        <button className="icon"><IoMdSearch color="white" /></button>
-                    </div>
-                </div>
+                <Search style={'container'} />
             </div>
-            <Modal className='hide-in-larege'>
-                {navLinks}
-            </Modal>
+            <Popup isOpen={isOpen} openModal={openModal} type={popupType} />
         </header>
     )
 }

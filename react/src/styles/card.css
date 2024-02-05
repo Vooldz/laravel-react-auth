@@ -20,11 +20,7 @@
     position: relative;
 
     &.product {
-        /* .card-img {
-            /* for disigne 
-            height: 120px;
-            background-color: var(--primary-color);
-        } */
+        background-color: #fff;
 
         .card-body {
             padding: 10px var(--main-padding);
