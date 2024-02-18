@@ -4,7 +4,7 @@ header {
     @media (min-width: 768px) {
         flex-direction: column;
     }
-    
+
     .nav-top {
         background-color: var(--main-color);
         padding: 1px 0;
@@ -15,11 +15,11 @@ header {
         width: 100%;
         padding: var(--main-padding) 0;
         color: white;
-      
+
         background-color: var(--main-color);
         fill: white;
         box-shadow: var(--main-shadow);
-        
+
         @media(min-width: 768px) {
             color: var(--main-color);
             fill: var(--main-color);
@@ -33,8 +33,19 @@ header {
 
         ul {
             display: none;
+
             @media (min-width: 768px) {
                 display: flex;
+            }
+
+            &.column {
+                flex-direction: column;
+                align-items: flex-start;
+                background-color: red;
+                width: 60%;
+                float: right;
+                margin-top: 60px;
+                box-shadow: var(--main-shadow);
             }
         }
     }
