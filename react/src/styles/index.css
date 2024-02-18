@@ -1,8 +1,8 @@
 :root {
   --main-padding: 5px;
-  --main-color: green;
-  --primary-color: #03A9F4;
-  --secondary-color: #ffc107;
+  --main-color: #23CE6B;
+  --primary-color: #08B2E3;
+  --secondary-color: #294d61;
   --grey-color: #dadada;
 
   --text-color: #2d2d2d;
@@ -22,9 +22,6 @@
   font-family: roboto, sans-serif;
 }
 
-.App {
-  background-color: #e5f6ff;
-}
 a {
   text-decoration: none;
   color: black;

@@ -29,12 +29,12 @@ const Header = () => {
     return (
         <header>
             <div className="nav-top hidden-in-small">
-                <div className="container flex">
-                    <div className="flex">
+                <div className="container box">
+                    <div className="box">
                         <button className="icon">button1</button>
                         <button className="icon">button2</button>
                     </div>
-                    <div className="flex">
+                    <div className="box">
                         <Link className="button icon" to={'/profile'}><FaRegUserCircle /></Link>
                         <button className="icon" onClick={() => openModal("window")}><RiInboxArchiveFill /></button>
                         <select className="button icon" name="lang" id="lang">
@@ -45,10 +45,10 @@ const Header = () => {
                 </div>
             </div>
             <div className="nav-center">
-                <div className="container flex">
-                    <button className="icon simple"><h1 className="flex"><FaDropbox />VOOLDZ</h1></button>
+                <div className="container box">
+                    <button className="icon simple"><h1 className="box"><FaDropbox />VOOLDZ</h1></button>
                     <NavLinks style={"row"} />
-                    <div className="flex hidden-in-large">
+                    <div className="box hidden-in-large">
                         <button className="icon" onClick={() => openModal("window-search")}><IoMdSearch /></button>
                         <Link className="button icon" to={'/profile'}><FaRegUserCircle /></Link>
                         <button className="icon" onClick={() => openModal("window-products")}><RiInboxArchiveFill /></button>
